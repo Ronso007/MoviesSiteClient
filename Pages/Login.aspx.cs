@@ -18,29 +18,32 @@ public partial class Pages_Login : System.Web.UI.Page
 
     protected void submit_Click(object sender, EventArgs e)
     {
-        UserDetails user = new UserDetails();
-        UserService userService = new UserService();
-
-        string Username = username.Text;
-        string Password = password.Text;
-
-        user = userService.GetUser(Username);
-
-        if(user.Password == Password)
+        if (Page.IsValid)
         {
-            Session["User"] = user.Name;
-            Session["Username"] = user.Username;
-            Session["Admin"] = user.Admin;
-            Response.Redirect("Home.aspx");
-            /*userMsg.Attributes.Add("class", "alert alert-success");
-            msg = "Success!";
-            Session["User"] = user.Name;*/
-        }
-        else //Wrong Password
-        {
-            userMsg.Attributes.Add("class", "alert alert-danger");
-            msg = "Wrong Username or Password! ";
+            UserDetails user = new UserDetails();
+            UserService userService = new UserService();
 
+            string Username = username.Text;
+            string Password = password.Text;
+
+            user = userService.GetUser(Username);
+
+            if (user.Password == Password)
+            {
+                Session["User"] = user.Name;
+                Session["Username"] = user.Username;
+                Session["Admin"] = user.Admin;
+                Response.Redirect("Home.aspx");
+                /*userMsg.Attributes.Add("class", "alert alert-success");
+                msg = "Success!";
+                Session["User"] = user.Name;*/
+            }
+            else //Wrong Password
+            {
+                userMsg.Attributes.Add("class", "alert alert-danger");
+                msg = "Wrong Username or Password! ";
+
+            }
         }
     }
 }

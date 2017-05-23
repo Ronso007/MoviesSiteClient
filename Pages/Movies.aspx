@@ -41,7 +41,7 @@
                     &nbsp;<br />
                     Duration:<asp:Label ID="Duration" Font-Bold="true" runat="server" Text='<%# Bind("Duration") %>'></asp:Label>
                     &nbsp;min<br />
-                    Rating:<asp:Label ID="LabelRating" runat="server" Font-Bold="true" Font-Underline="true" Text='<%#String.Format("{0}", Convert.ToDouble(Eval("TotalRating")) / Convert.ToDouble(Eval("NumberOfUsers")))%>'></asp:Label>
+                    Rating:<asp:Label ID="LabelRating" runat="server" Font-Bold="true" Font-Underline="true" Text='<%#String.Format("{0:0.00}", Convert.ToDouble(Eval("TotalRating")) / Convert.ToDouble(Eval("NumberOfUsers")))%>'></asp:Label>
                     /5<br />
                     <asp:Button ID="MovieButton" runat="server" Text="More Details" CommandName="Details" />
                 </ItemTemplate>

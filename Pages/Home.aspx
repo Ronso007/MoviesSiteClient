@@ -7,31 +7,31 @@
 
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <div class="jumbotron">
+    <div class="jumbotron text-center" style="background-color:aliceblue">
         <h1>Movies Database</h1>
         <p class="lead">This is a Movies Database site. you will find Directors, Actors and more...</p>
     </div>
     <div class="row marketing">
         <div class="col-lg-6">
-            <h4>Subheading</h4>
-            <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+            <h3 style="color:pink">The Best</h3>
+            <p>You Can See The Best Movies!</p>
 
-            <h4>Subheading</h4>
-            <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
+            <h3 style="color:dodgerblue">Information</h3>
+            <p>You Can see information on your favorite Movies Such as Actors, Directors And Description!.</p>
 
-            <h4>Subheading</h4>
-            <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+            <h3 style="color:darkorange">Control Panel</h3>
+            <p>As an admin you can Control almost Everything in this site!</p>
         </div>
 
         <div class="col-lg-6">
-            <h4>Subheading</h4>
-            <p>Donec id elit non mi porta gravida at eget metus. Maecenas faucibus mollis interdum.</p>
+            <h3 style="color:springgreen">Register And Login</h3>
+            <p>You can Register and Login, Of course you can Edit your Personal Information as well!</p>
 
-            <h4>Subheading</h4>
-            <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-            <h4>Subheading</h4>
-            <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+            <h3 style="color:thistle">Rating And Reviews</h3>
+            <p>As a Member You Can Rate and review Every Movie You Saw!</p>
+            
+            <h3 style="color:darkblue">And More!</h3>
+            <p>Just Explore The Site!</p>
         </div>
     </div>
 

@@ -549,10 +549,10 @@
   </wsdl:binding>
   <wsdl:service name="MoviesWebService">
     <wsdl:port name="MoviesWebServiceSoap" binding="tns:MoviesWebServiceSoap">
-      <soap:address location="http://localhost:58674/WebService/MoviesWebService.asmx" />
+      <soap:address location="http://localhost:62073/WebService/MoviesWebService.asmx" />
     </wsdl:port>
     <wsdl:port name="MoviesWebServiceSoap12" binding="tns:MoviesWebServiceSoap12">
-      <soap12:address location="http://localhost:58674/WebService/MoviesWebService.asmx" />
+      <soap12:address location="http://localhost:62073/WebService/MoviesWebService.asmx" />
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>
