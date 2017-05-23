@@ -26,6 +26,7 @@
                             <asp:TextBox CssClass="form-control" ID="username" runat="server" MaxLength="16" placeholder="Enter your Username"></asp:TextBox>
                         </div>
                         <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="username" ErrorMessage="Username Error!" ForeColor="Red" ValidationExpression="[\w]{3,22}"></asp:RegularExpressionValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="username" ErrorMessage="Username Error!"></asp:RequiredFieldValidator>
                     </div>
                 </div>
 

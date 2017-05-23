@@ -27,6 +27,7 @@
                         </div>
                     </div>
                     <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="name" ErrorMessage="Name Error!" ForeColor="Red" ValidationExpression="[a-z,A-Z]{2,15}"></asp:RegularExpressionValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="name" ErrorMessage="Username Error!"></asp:RequiredFieldValidator>
                 </div>
 
                 <div class="form-group">
