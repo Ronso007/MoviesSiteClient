@@ -64,7 +64,7 @@ public class UserService
             myConn.Close();
         }
 
-    }
+    }//מכניס משתמש למאגר
 
     public UserDetails GetUser(string username)
     {
@@ -106,7 +106,7 @@ public class UserService
             myConn.Close();
         }
         return user;
-    }
+    }//מחזיר משתמש מהמאגר
 
     public void UpdateUser(UserDetails userD,bool admin)
     {
@@ -162,7 +162,7 @@ public class UserService
         }
 
 
-    }
+    }//מעדכן משתמש
 
     public DataSet GetUsers()
     {
@@ -184,7 +184,7 @@ public class UserService
             throw ex;
         }
         return UsersTable;
-    }
+    }//מחזיר את כל המשתמשים
 
     
 }

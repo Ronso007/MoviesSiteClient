@@ -14,10 +14,10 @@ public class MoviesService
 
     public MoviesService()
     {
-        myConn = new OleDbConnection(ConnectIMdb.getConnectionString());
+        myConn = new OleDbConnection(ConnectIMdb.getConnectionString()); //חיבור
     }
 
-    public void InsertMovie(MoviesDetails movie)
+    public void InsertMovie(MoviesDetails movie)//מכניס סרט למאגר
     {
         string Name = movie.MovieName;
         string Director = movie.Director;
@@ -75,7 +75,7 @@ public class MoviesService
 
     }
 
-    public int GetIDbyName(string name)
+    public int GetIDbyName(string name)//מקבל שם ומחזיר את האיידי של הסרט
     {
         int id;
         OleDbCommand myCmd = new OleDbCommand("GetMovieByName", myConn);
@@ -110,7 +110,7 @@ public class MoviesService
 
     }
 
-    public MoviesDetails GetMovieByID(int id)
+    public MoviesDetails GetMovieByID(int id) //מקבל איידי ומחזיר סרט
     {
         MoviesDetails movie = new MoviesDetails();
 
@@ -156,7 +156,7 @@ public class MoviesService
 
     }
 
-    public DataSet GetAllMovies()
+    public DataSet GetAllMovies() //מחזיר את כל הסרטים
     {
         OleDbCommand myCmd = new OleDbCommand("GetAllMovies", myConn);
         myCmd.CommandType = CommandType.StoredProcedure;
@@ -178,7 +178,7 @@ public class MoviesService
         return MoviesTable;
     }
 
-    public void UpdateMovieRating(int rating,int movieID,int addUser)
+    public void UpdateMovieRating(int rating,int movieID,int addUser)//מעדכן את הניקוד של הסרט
     {
         OleDbCommand myCmd = new OleDbCommand("UpdateMovieRating", myConn);
         myCmd.CommandType = CommandType.StoredProcedure;
@@ -215,7 +215,7 @@ public class MoviesService
 
     }
 
-    public DataSet GetAllMoviesFiltered(int Expression,int Rating)
+    public DataSet GetAllMoviesFiltered(int Expression,int Rating)//מחזיר את הסרטים לאחר חיפוש סרט ע"פ דירוג
     {
         string sqlS = "";
 
@@ -251,7 +251,7 @@ public class MoviesService
 
     }
 
-    public DataSet SearchMovie(string SearchExpression)
+    public DataSet SearchMovie(string SearchExpression) //מחזיר את הסרטים לאחר חיפוש סרט ע"פ שם
     {
         string sqlS = "";
 

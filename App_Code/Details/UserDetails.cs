@@ -96,4 +96,4 @@ public class UserDetails
             admin = value;
         }
     }
-}
+} // פרטי משתמש

@@ -56,9 +56,9 @@ public class RatingService
         {
             myConn.Close();
         }
-    }
+    }//מכניס שורה של דירוג סרט
 
-    public DataSet GetAllRating()
+    public DataSet GetAllRating()//מחזיר את כל דירוגי הסרטים
     {
         OleDbCommand myCmd = new OleDbCommand("GetAllRating", myConn);
         myCmd.CommandType = CommandType.StoredProcedure;
@@ -81,7 +81,7 @@ public class RatingService
         return RatingTable;
     }
 
-    public bool DidRateAlready(string username,int movieID)
+    public bool DidRateAlready(string username,int movieID)//בודק האם משתמש דירג כבר סרט
     {
         bool Found;
         OleDbCommand myCmd = new OleDbCommand("GetRatingOfUser", myConn);
@@ -113,7 +113,7 @@ public class RatingService
         return Found;
     }
 
-    public DataSet GetAllReviewsOfUser(string username)
+    public DataSet GetAllReviewsOfUser(string username)//מחזיר את כל הדירוגים שמשתמש עשה
     {
         OleDbCommand myCmd = new OleDbCommand("GetAllReviewsOfUser", myConn);
         myCmd.CommandType = CommandType.StoredProcedure;
@@ -143,7 +143,7 @@ public class RatingService
         return RatingTable;
     }
 
-    public void UpdateRating(string username,int movieID,int Rating,string Review )
+    public void UpdateRating(string username,int movieID,int Rating,string Review )//מעדכן את הדירוג והביקורת
     {
         OleDbCommand myCmd = new OleDbCommand("UpdateRatingRow", myConn);
         myCmd.CommandType = CommandType.StoredProcedure;
@@ -201,7 +201,7 @@ public class RatingService
             throw ex;
         }
         return RatingTable;
-    }
+    }//מחזיר את כל הדירוגים של סרט
 
     public int GetSpecificRating(string username,int movieID)
     {
@@ -242,6 +242,6 @@ public class RatingService
         }
         return rating;
 
-    }
+    }//מחזיר דירוג ספציפי
 
 }
