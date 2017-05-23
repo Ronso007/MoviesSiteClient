@@ -25,8 +25,8 @@
                             <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
                             <asp:TextBox CssClass="form-control" ID="username" runat="server" MaxLength="16" placeholder="Enter your Username"></asp:TextBox>
                         </div>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="username" ErrorMessage="Username Error!" ForeColor="Red" ValidationExpression="[\w]{3,22}"></asp:RegularExpressionValidator>
                     </div>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="username" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
                 </div>
 
                 <div class="form-group">
@@ -37,7 +37,7 @@
                             <asp:TextBox CssClass="form-control" ID="password" runat="server" MaxLength="16" placeholder="Enter your Password" TextMode="Password"></asp:TextBox>
                         </div>
                     </div>
-                    <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="password" ErrorMessage="Password Error!" ForeColor="Red" ValidationExpression="[\w]{3,22}"></asp:RegularExpressionValidator>
                 </div>
                 <div class="text-center">
                     <div id="userMsg" runat="server">
