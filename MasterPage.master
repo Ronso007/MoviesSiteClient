@@ -55,11 +55,10 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-option-vertical"></span>DataBase <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Directors</a></li>
-                                <li><a href="#">Actors</a></li>
+                                <li><a href="Directors.aspx">Directors</a></li>
+                                <li><a href="Actors.aspx">Actors</a></li>
                                 <%=navbarLeft %>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="#"><span class="glyphicon glyphicon-search"></span>Search Movies</a></li>
                             </ul>
                         </li>
                     </ul>
